@@ -1,0 +1,280 @@
+$gold-1: #f5d27a;
+$gold-2: #c89b3c;
+$gold-3: #8f6a22;
+
+$dark: #111111;
+$card-bg: #1b1b1b;
+
+.card {
+  width: 50vw;
+  padding: 2rem;
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    #1f1f1f,
+    #111111
+  );
+
+  border: 1px solid rgba(245, 210, 122, 0.2);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      135deg,
+      rgba(245, 210, 122, 0.08),
+      transparent 30%
+    );
+
+    pointer-events: none;
+  }
+
+  &__logo {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $gold-1;
+    margin-bottom: 1rem;
+
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.58);
+  }
+
+  &__text {
+    color: #d4d4d4;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  &__footer-line {
+    margin-top: 2rem;
+    height: 2px;
+    border-radius: 10px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $gold-1,
+      $gold-2,
+      $gold-1,
+      transparent
+    );
+  }
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px;
+
+  a {
+    color: #e6c777;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      background: #e6c777;
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+
+  a {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    color: #f0d38a;
+
+    border: 1px solid rgba(240, 211, 138, 0.4);
+
+    background: rgba(255, 255, 255, 0.03);
+
+    transition: 0.3s;
+
+    &:hover {
+      background: #f0d38a;
+      color: #111;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+
+  color: #f0d38a;
+  text-decoration: none;
+  font-weight: 500;
+
+  border: 1px solid rgba(240, 211, 138, 0.5);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  transition: 0.3s;
+
+  i {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: #f0d38a;
+    color: #111;
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(240, 211, 138, 0.25);
+  }
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 768px) {
+
+  .card {
+    width: 90vw;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .card__logo {
+    width: 60px;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.58);
+  }
+
+  .card__text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .socials {
+    gap: 12px;
+
+    a {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  .card__actions {
+    flex-direction: column;
+  }
+
+  .card__btn {
+    width: 100%;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    i {
+      font-size: 16px;
+    }
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 480px) {
+
+  .card {
+    width: calc(100vw - 24px);
+    padding: 1.2rem;
+    border-radius: 18px;
+  }
+
+  .card__logo {
+    width: 50px;
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .contact-links a {
+    font-size: 13px;
+  }
+
+  .socials {
+    justify-content: center;
+
+    a {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .card__btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}
