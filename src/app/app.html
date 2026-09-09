@@ -1,69 +1,131 @@
-<div class="container   mt-5 d-flex d-flex justify-content-center align-items-center " style="height: 80vh;" >
-  
-  <div class="card d-flex justify-content-center align-items-center ">
-
-    <div class="row g-3">
-      <div class="col-12 col-md-4 order-2 order-md-1 d-flex justify-content-center align-items-center">
-        <div class="card__actions row g-3 ">
-
-
-          <a href="https://www.facebook.com/share/1HfYoqsiHQ/" target="_blank" class="card__btn">
-            <i class="fa-brands fa-facebook"></i>
-            Facebook
-          </a>
-
-          <a href="https://tiktok.com" target="_blank" class="card__btn">
-            <i class="fa-brands fa-tiktok"></i>
-            TikTok
-          </a>
-
-          <a href="https://snapchat.com" target="_blank" class="card__btn">
-            <i class="fa-brands fa-instagram"></i>
-            Snapchat
-          </a>
+<div class="mt-5">
+  <div
+    class="container mt-5 d-flex d-flex justify-content-center align-items-center"
+    style="height: 80vh"
+  >
+    <div class="card d-flex justify-content-center align-items-center">
+      <div class="row g-3 mb-4">
+        <div
+          class="col-6 col-md-4 order-2 order-md-1 d-flex justify-content-center align-items-center"
+        >
+          <div class="card__actions row g-3">
+            <a href="https://www.facebook.com/share/1HfYoqsiHQ/" target="_blank" class="card__btn">
+              <i class="fa-brands fa-facebook fa-2x"></i>
+              Facebook
+            </a>
+            <a
+              href="https://chat.whatsapp.com/HvnJ29OMrDgG17ORnHEVgC?s=sh&p=a&mlu=4&ilr=4"
+              target="_blank"
+              class="card__btn"
+            >
+              <i class="fa-brands fa-whatsapp fa-2x"></i>
+              WhatsApp Group
+            </a>
+            <a href="https://www.tiktok.com/@jowairyaahmed82" target="_blank" class="card__btn">
+              <i class="fa-brands fa-tiktok fa-2x"></i>
+              TikTok
+            </a>
+          </div>
         </div>
+        <div
+          class="col-12 col-md-4 order-1 order-md-2 d-flex justify-content-center align-items-center p-4"
+        >
+          <img
+            src="logo.jpeg"
+            class="img-fluid img-thumbnail rounded-circle"
+            width="200"
+            alt="Jowairya Logo"
+          />
+        </div>
+        <div
+          class="col-6 col-md-4 order-3 order-md-3 d-flex justify-content-center align-items-center"
+        >
+          <div class="card__actions row g-3">
+            <a href="tel:+201090994386" class="card__btn">
+              <i class="fas fa-phone fa-2x"></i>
+              Call
+            </a>
 
-      </div>
-      <div class="col-12 col-md-4 order-1 order-md-2 d-flex justify-content-center align-items-center p-4">
-        <img src="logo.jpeg" class="img-fluid img-thumbnail rounded-circle" width="200" alt="Jowairya Logo">
-      </div>
-      <div class="col-12 col-md-4 order-3 order-md-3 d-flex justify-content-center align-items-center">
-        <div class="card__actions row g-3 ">
-          <a href="tel:+201090994386" class="card__btn">
-            <i class="fas fa-phone"></i>
-            Call
-          </a>
+            <a href="https://wa.me/+201090994386" target="_blank" class="card__btn">
+              <i class="fa-brands fa-whatsapp fa-2x"></i>
+              WhatsApp
+            </a>
 
-          <a href="https://wa.me/00201090994386" target="_blank" class="card__btn">
-            <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp
-          </a>
-
-          <a href="https://instagram.com" target="_blank" class="card__btn">
-            <i class="fa-brands fa-instagram"></i>
-            Instagram
-          </a>
-
-
-
-
-
+            <a href="https://instagram.com" target="_blank" class="card__btn">
+              <i class="fa-brands fa-instagram fa-2x"></i>
+              Instagram
+            </a>
+          </div>
         </div>
       </div>
+
+      <h3 class="card__title">جويريه</h3>
+
+      <p class="card__text">
+        متجر ملابس ستوكات اوت ليت جديدة غير مستعملة لجميع البراندات
+        <br />
+        (رجالي - حريمي - اطفالي )
+      </p>
+
+      <button
+        type="button"
+        class="card__btn card__btn--vodafone"
+        (click)="copyPhoneNumber()"
+        [attr.aria-label]="phoneCopied() ? 'تم نسخ الرقم 01090994386' : 'نسخ رقم فودافون كاش'"
+      >
+        <svg width="150" height="50" viewBox="15 15 190 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Back card -->
+          <g transform="rotate(35 135 65)">
+            <rect
+              x="95"
+              y="30"
+              width="75"
+              height="55"
+              rx="6"
+              fill="#e60000"
+              stroke="#ffffff"
+              stroke-width="4"
+            />
+          </g>
+
+          <!-- Front card -->
+          <rect
+            x="25"
+            y="40"
+            width="135"
+            height="80"
+            rx="8"
+            fill="#ffffff"
+            stroke="#e60000"
+            stroke-width="4"
+          />
+
+          <!-- Red circle -->
+          <circle cx="50" cy="62" r="12" fill="#e60000" stroke="#ffffff" stroke-width="4" />
+
+          <!-- Bottom lines -->
+          <line
+            x1="105"
+            y1="105"
+            x2="122"
+            y2="105"
+            stroke="#e60000"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+          <line
+            x1="130"
+            y1="105"
+            x2="147"
+            y2="105"
+            stroke="#e60000"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+        </svg>
+
+        {{ phoneCopied() ? 'فودافون كاش -  تم النسخ': 'فودافون كاش - انسخ الرقم' }}
+      </button>
     </div>
-
-
-
-    <h3 class="card__title ">
-      جويريه
-    </h3>
-
-    <p class="card__text">
-      Premium solutions designed with elegance,
-      quality and luxury in mind.
-    </p>
-
-
-
   </div>
 </div>
