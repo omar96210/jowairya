@@ -182,16 +182,42 @@ $card-bg: #1b1b1b;
   }
 }
 
+.payment-actions {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+
+  > .card__btn {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+  }
+}
+
 .card__btn--vodafone {
-  color: #e60000;
-  background: #ffffff;
-  border-color: #ffffff;
+  color: #ffffff;
+  background: #e60000;
+  border-color: #e60000;
 
   &:hover {
-    color: #ffffff;
-    background: #e60000;
-    border-color: #e60000;
-    box-shadow: 0 8px 25px rgba(230, 0, 0, 0.3);
+    color: #e60000;
+    background: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.card__btn--instapay {
+  color: #ffffff;
+  background: #40145f;
+  border-color: #40145f;
+  box-shadow: inset 0 -4px 0 #f47721;
+
+  &:hover {
+    color: #40145f;
+    background: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(64, 20, 95, 0.3);
   }
 }
 
@@ -311,6 +337,35 @@ $card-bg: #1b1b1b;
 
   .card__btn {
     font-size: 13px;
+    height: 64px;
+    box-sizing: border-box;
     padding: 8px 14px;
+  }
+
+  .card__btn--instapay {
+    img {
+      width: 88px;
+      height: 34px;
+    }
+  }
+
+  .payment-actions {
+    gap: 8px;
+
+    > .card__btn {
+      gap: 4px;
+      padding: 8px 6px;
+      font-size: 11px;
+    }
+
+    .card__btn--vodafone svg {
+      width: 58px;
+      height: 34px;
+    }
+
+    .card__btn--instapay img {
+      width: 58px;
+      height: 30px;
+    }
   }
 }
