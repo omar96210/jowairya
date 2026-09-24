@@ -20,7 +20,7 @@ export class App {
 
 
     protected readonly titleInsta = signal('jowairya');
-  protected readonly phoneNumberInsta = '01090994386';
+  protected readonly phoneNumberInsta = '01113044080';
   protected readonly phoneCopiedInsta = signal(false);
 
   protected async copyPhoneNumberInsta(): Promise<void> {
