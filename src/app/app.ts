@@ -16,4 +16,16 @@ export class App {
     await navigator.clipboard.writeText(this.phoneNumber);
     this.phoneCopied.set(true);
   }
+
+
+
+    protected readonly titleInsta = signal('jowairya');
+  protected readonly phoneNumberInsta = '01090994386';
+  protected readonly phoneCopiedInsta = signal(false);
+
+  protected async copyPhoneNumberInsta(): Promise<void> {
+    await navigator.clipboard.writeText(this.phoneNumberInsta);
+    this.phoneCopiedInsta.set(true);
+  }
+  
 }

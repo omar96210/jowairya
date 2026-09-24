@@ -111,10 +111,11 @@
             class="card__btn card__btn--instapay w-100 d-flex justify-content-between align-items-center"
             style="width: 100%"
             aria-label="الدفع من خلال انستا باي"
+            (click)="copyPhoneNumberInsta()"
           >
             <img src="https://ipn.eg/img/IPN.svg" width="86" alt="IPN" />
-             <h6>...قريبا</h6> 
-            <!-- <h6>انستاباي</h6> -->
+            <h6>            {{ phoneCopiedInsta() ? 'انستاباي -  تم النسخ' : 'انستاباي - انسخ الرقم' }}
+</h6>
           </button>
         </div>
       </div>
